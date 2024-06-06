@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show page!</title>
+</head>
+<body>
+    <h1><%=showAnime.title%></h1>
+        <h3>Release Year: <%=showAnime.releaseYear%></h3>
+        <h3>IMDB rating: <%=showAnime.rating%></h3>
+        <h3>genre(s): <%=showAnime.genre%></h3>  
+    <div>
+        <a href="/anime/<%=showAnime.id%>/edit">Edit this anime</a>
+    </div> 
+    <div>
+        <a href="/anime">Back to main page</a>
+    </div>
+    <div>
+        <form method="POST" action="/anime/<%=showAnime.id%>?_method=DELETE">
+            <button>Delete</button>
+        </form>
+    </div>
+</body>
+</html>

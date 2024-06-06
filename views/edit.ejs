@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit Anime</h1>
+        <form method="POST" action="/anime/<%=showAnime.id%>?_method=PATCH">
+            <label id="title"></label>
+            <input type="text" placeholder="<%=showAnime.title%>" name="title" id="title">
+            <label id="rating"></label>
+            <input type="text" placeholder="<%=showAnime.rating%>" name="rating" id="rating">
+            <label id="releaseYear"></label>
+            <input type="text" placeholder="<%=showAnime.releaseYear%>" name="releaseYear" id="releaseYear">
+            <label id="genre"></label>
+            <input type="text" placeholder="<%=showAnime.genre%>" name="genre" id="genre">
+            <button>Submit</button>
+        </form>
+        <a href="/anime">back to Animes</a>
+</body>
+</html>
